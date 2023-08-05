@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #a0d2eb,#8458B3);
+    padding: 10px;
+}
+.todo{
+    background: #fff;
+    width: 500px;
+    border-radius: 10px;
+    margin: 100px auto 20px;
+    padding: 30px 20px 60px;
+}
+.todo h2{
+    color: #7926d1;
+    display: flex;
+    margin-bottom: 20px;
+    /* justify-content: center; */
+    align-items: center;
+}
+.todo img{
+    width: 34px;
+    margin-right: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background: #b8c3c8;
+    padding-left: 5px;
+    border-radius: 30px;
+    margin: 0 auto 10px;
+}
+.row input{
+    flex: 1;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+button{
+    cursor: pointer;
+    /* font-size: 15px; */
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(#2d545e,#51e2f5);
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in;
+}
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 8px 7px 19px -2px #1a16e629, -6px -3px 19px -2px #08b6ebb3;
+}
+ul li {
+    list-style: none;
+    font-size: 16px;
+    padding: 14px 35px 10px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("circle.png");
+    background-size: cover;
+    background-position: center;
+    left: 10px;
+    top: 12px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("checked.png");
+
+}
+ul li span{
+    border-radius: 50%;
+    text-align: center;
+    /* border: 2px solid red; */
+    position: absolute;
+    right: 0;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    top: 1dpx;
+    font-weight: bold;
+    color: #000;
+}
+ul li span:hover{
+    cursor: pointer;
+    background: linear-gradient(#2d545e,#51e2f5);
+}
